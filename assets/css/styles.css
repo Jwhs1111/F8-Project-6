@@ -1,0 +1,230 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Sora", sans-serif;
+}
+
+:root {
+    --primary-color: #5d3bee;
+}
+
+/* Common */
+a {
+    text-decoration: none;
+}
+
+.header {
+    background: #ccc;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 60px;
+    padding-right: 135px;
+}
+
+.nav__contact {
+    display: flex;
+    align-items: center;
+    color: #080415;
+    cursor: pointer;
+}
+
+.contact__desc {
+    color: #080415;
+}
+
+.contact__icon {
+    margin-right: 10px;
+}
+
+.nav__logo {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Add transition for a smooth effect */
+}
+
+.nav__logo:hover {
+    transform: rotate(-20deg); /* Rotate the logo 20 degrees when hovered */
+}
+
+.nav__logo:hover::after {
+    content: ""; /* Create a pseudo-element for the hover-out effect */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: transparent;
+    transform: rotate(-20deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav__logo:hover::after {
+    transform: rotate(-20deg); /* Rotate the pseudo-element to create the hover-out effect */
+}
+
+.nav__menu-list {
+    display: flex;
+    margin-right: -111px;
+}
+
+.nav__menu-list li {
+    padding: 16px 15px;
+}
+
+.nav__menu-list li:hover a {
+    color: #0036e6;
+}
+
+.header__hero {
+    display: flex;
+}
+
+.hero-media__img {
+    display: flex;
+}
+
+.hero-media__img img {
+    display: block;
+}
+
+.hero-media__img img:nth-child(1) {
+    width: 835.63px;
+    height: 738.06px;
+    margin-bottom: 0;
+}
+
+.hero-media__img img:nth-child(2) {
+    width: 514px;
+    height: 705px;
+    margin-top: 33px;
+    margin-left: -676px;
+    margin-bottom: 0;
+    position: relative; /* Cho phép sử dụng top để điều chỉnh vị trí từ trên xuống */
+    top: auto; /* Thiết lập vị trí top mặc định */
+    object-fit: cover;
+}
+
+.header__hero-content {
+    padding: 181px 56px 0;
+}
+
+.header__hero-heading {
+    width: 500px;
+    height: 164px;
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.header__hero-desc {
+    width: 587px;
+    height: 110px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.55;
+    color: #51586a;
+}
+
+.header__hero-cta {
+    display: flex;
+    width: 330px;
+    height: 62px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.header__hero-cta a:nth-child(1) {
+    display: flex;
+    background: var(--primary-color);
+    width: 240px;
+    height: 62px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    padding: 16px 20px;
+    border-radius: 99px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.header__hero-cta a:hover:nth-child(1) {
+    background: orange;
+    color: #fff;
+}
+
+.header__hero-cta a:hover:nth-child(2) {
+    text-decoration: underline;
+}
+
+.header__hero-cta a:nth-child(2) {
+    display: flex;
+    width: 170px;
+    height: 62px;
+    color: #000;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 16px 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.social {
+    display: flex;
+    width: 292px;
+    height: 40px;
+    align-items: center;
+    margin-top: 104px;
+}
+
+.social__desc {
+    display: inline-block;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+
+.social__link {
+    display: flex;
+    padding: 10px 10px;
+    border-radius: 50%;
+    margin-left: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.social__link:hover {
+    transform: scale(1.1); /* Tăng kích thước khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+}
+/* Mobile first */
+/* @media (min-width: 768px) {
+    .container {
+        --spacer: 24px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        --spacer: 30px;
+    }
+} */
+
+/* Desktop first */
+/* @media (max-width: 991.98px) {
+    .container {
+        --spacer: 24px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .container {
+        --spacer: 10px;
+    }
+} */
