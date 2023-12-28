@@ -17,8 +17,9 @@ a {
     text-decoration: none;
 }
 
+/* Header */
 .header {
-    background: #ccc;
+    background: #eeeaea;
 }
 
 .header__nav {
@@ -42,6 +43,13 @@ a {
 
 .contact__icon {
     margin-right: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact__icon:hover {
+    transform: scale(1.1); /* Tăng kích thước khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
 }
 
 .nav__logo {
@@ -77,6 +85,11 @@ a {
 
 .nav__menu-list li {
     padding: 16px 15px;
+}
+
+.nav__menu-list li a {
+    color: #080415;
+    transition: all 0.3s ease;
 }
 
 .nav__menu-list li:hover a {
@@ -125,7 +138,7 @@ a {
 }
 
 .header__hero-desc {
-    width: 587px;
+    width: 573px;
     height: 110px;
     font-weight: 400;
     font-size: 1.4rem;
@@ -194,14 +207,84 @@ a {
 .social__link {
     display: flex;
     padding: 10px 10px;
-    border-radius: 50%;
     margin-left: 20px;
+    border-radius: 50%;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .social__link:hover {
     transform: scale(1.1); /* Tăng kích thước khi hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+}
+
+.header__decor {
+    width: 435px;
+    height: 128px;
+    margin-bottom: -26px;
+}
+
+/* Trusted company */
+.bands {
+    display: flex;
+    width: calc(100% - 430px);
+    height: 113px;
+    padding: 10px 10px;
+    margin-top: 88px;
+    margin-bottom: 88px;
+    margin-left: auto;
+    margin-right: 159px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.band__title {
+    position: relative;
+    width: 212px;
+    height: 36px;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #080415;
+}
+
+.band__title::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: -99px;
+    width: 72px; /* Make the border cover the entire width of the parent */
+    border-top: 2px solid var(--primary-color);
+}
+
+.band__logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 105px;
+    flex-wrap: wrap;
+}
+
+.band__link {
+    display: flex;
+    width: 154px;
+    height: 50px;
+    border-radius: 5px;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.band__link:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+}
+
+.band__link img {
+    margin-left: 13px;
+}
+
+.band__link-desc {
+    margin-left: 13px;
+    flex-wrap: nowrap;
+    font-size: 12px;
 }
 /* Mobile first */
 /* @media (min-width: 768px) {
